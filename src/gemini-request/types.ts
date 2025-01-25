@@ -1,3 +1,4 @@
+//#region Request
 interface GeminiRequest {
   contents: GeminiRequestContent[]
 }
@@ -9,10 +10,9 @@ interface GeminiRequestContent {
 interface GeminiRequestPart {
   text: string
 }
+//#endregion
 
-
-
-
+//#region Response
 interface GeminiResponse {
   candidates: GeminiResponseCandidate[]
   usageMetadata: GeminiResponseUsageMetadata
@@ -39,6 +39,6 @@ interface GeminiResponseUsageMetadata {
   candidatesTokenCount: number
   totalTokenCount: number
 }
-
+//#endregion
 
 export {GeminiRequest, GeminiResponse};
